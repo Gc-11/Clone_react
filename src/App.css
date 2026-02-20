@@ -1,0 +1,119 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+body { background: #000; color: #fff; }
+
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+header img { height: 28px; }
+.menu { font-size: 24px; cursor: pointer; }
+
+.slider {
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  background: #e4002b;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 40px 20px;
+  color: white;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active { background: black; }
+
+.contactSection {
+  padding: 60px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.contactSection input,
+.contactSection textarea {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+}
+
+.btn {
+  background: #e4002b;
+  border: none;
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+footer {
+  background: #000;
+  padding: 40px 20px;
+}
+
+.footer-item {
+  border-bottom: 1px solid #ffffff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  padding: 10px 0;
+  color: #ccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+}
