@@ -19,8 +19,53 @@ header {
 header img { height: 28px; }
 .menu { font-size: 24px; cursor: pointer; }
 
-.slider {
+.hero {
   margin-top: 60px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.stats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  text-align: center;
+  z-index: 1;
+}
+
+.stat h1 { font-size: 48px; font-weight: 800; }
+.stat p { font-size: 14px; }
+
+.image-section {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.slider {
   position: relative;
   overflow: hidden;
   background: #e4002b;
@@ -28,36 +73,19 @@ header img { height: 28px; }
   text-align: center;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.slide {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 40px 20px;
-  color: white;
-}
+.slides { display: flex; transition: transform 0.5s ease; }
+.slide { flex: 0 0 100%; padding: 40px 20px; }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
-  color: white;
   cursor: pointer;
 }
 
 .arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
-
-.dots {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
 
 .dot {
   height: 10px;
@@ -71,17 +99,9 @@ header img { height: 28px; }
 
 .dot.active { background: black; }
 
-.contactSection {
-  padding: 60px 20px;
-  text-align: center;
-  background: #111;
-}
-
-.contactSection input,
-.contactSection textarea {
-  padding: 10px;
-  margin: 10px;
-  width: 300px;
+.contactSection { padding: 60px 20px; text-align: center; background: #111; }
+.contactSection input, .contactSection textarea {
+  padding: 10px; margin: 10px; width: 300px;
 }
 
 .btn {
@@ -94,26 +114,4 @@ header img { height: 28px; }
   cursor: pointer;
 }
 
-footer {
-  background: #000;
-  padding: 40px 20px;
-}
-
-.footer-item {
-  border-bottom: 1px solid #ffffff;
-  padding: 15px 0;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  padding: 10px 0;
-  color: #ccc;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 12px;
-}
+footer { background: #000; padding: 40px 20px; text-align: center; }
