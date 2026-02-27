@@ -121,19 +121,23 @@ header img { height: 28px; }
 .dark {
   background: #000;
   color: #fff;
-  transition: 0.3s ease;
 }
 
+/* LIGHT MODE */
 .light {
   background: #ffffff;
   color: #000;
-  transition: 0.3s ease;
 }
 
 /* Header change in light mode */
+.dark header {
+  background: #ffffff;
+  color: #000;
+}
+
 .light header {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
 }
 
 /* Footer change in light mode */
