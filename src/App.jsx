@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from "react"
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Slider from './components/Slider'
@@ -7,9 +7,28 @@ import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(true)
+
+  
+  useEffect(() => {
+    const saved = localStorage.getItem("theme")
+    if (saved) setDarkMode(saved === "dark")
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("theme", darkMode ? "dark" : "light")
+  }, [darkMode])
+
   return (
-    <>
-      <Header />
+    <div className={darkMode ? "dark" : "light"}>
+      
+      
+      <Header 
+        toggleTheme={() => setDarkMode(!darkMode)} 
+        darkMode={darkMode} 
+      />
+
       <Hero />
       <Slider />
       
@@ -33,7 +52,7 @@ function App() {
 
       <ContactForm />
       <Footer />
-    </>
+    </div>
   )
 }
 
